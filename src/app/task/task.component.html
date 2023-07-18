@@ -1,0 +1,37 @@
+<p>task works!</p>
+<input type="text"placeholder="search">
+<button class="btn btn-primary" (click)="only()">Only free delivery</button>
+<br>
+<button class="btn btn-warning" (click)="phigh()" >Price: high to low</button>
+<button class="btn btn-warning" (click)="plow()">Price: low to high</button>
+<button class="btn btn-warning" (click)="rhigh()">rating: low to high</button>
+<button class="btn btn-warning" (click)="rlow()">rating: high to low</button>
+<br>
+<button class="btn btn-info" (click)="app()">Apply 50%discount</button>
+<button class="btn btn-info" (click)="pwd()">price with delivery changes</button>
+<table class="table table-dark">
+    <thead>
+         <tr>
+            <th>s.no</th>
+            <th>Product name</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Free delivery</th>
+            <th>Actions</th>
+            
+         </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{product.productname}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.rating}}</td>
+            <td>{{product.freedelivery}}</td>
+            
+            <td>
+                <button class="btn btn-danger" (click)="delete(i)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

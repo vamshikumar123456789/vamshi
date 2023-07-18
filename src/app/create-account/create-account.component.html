@@ -1,0 +1,28 @@
+
+<div class="parent">   
+    <form [formGroup]="accountForm">
+    
+        <h1>create account</h1>
+        <label>account_name:</label>
+        <input type="text" formControlName="account_name" >
+        <br>
+        <label>available_balance:</label>
+        <input type="text" formControlName="available_balance" >
+        <br>
+        <label>account_number:</label>
+        <input type="text" formControlName="account_number">
+        <br>
+        <label >city:</label>
+        <input type="text" formControlName="city">
+        <br>
+        <label >profie_picture:</label>
+        <input type="text" formControlName="profie_picture">
+        <br>
+        <label >id:</label>
+        <input type="text" formControlName="id">
+        <br>
+    
+        <button (click)="submit()">submit</button>
+
+    </form>
+</div>

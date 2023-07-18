@@ -1,0 +1,14 @@
+
+<div  class="parent" *ngFor="let mail of mails">
+    <div class="c1">
+        <img height="100px" width="100px" src="/assets/mail.png" alt="">
+    </div>
+    <div class="c2" [ngStyle]="{'font-weight': mail.completed? 100 : 900}">
+        
+        <p>Title {{mail.title}}</p>
+        <p>User Id {{mail.userId}}</p>
+        <p>Id {{mail.id}}</p>
+        <p> completed:{{mail.completed}} </p>
+
+    </div>
+</div>

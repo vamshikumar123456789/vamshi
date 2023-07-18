@@ -1,0 +1,54 @@
+<p>structural-directives works!</p>
+<p *ngFor="let name of names">{{name}}</p>
+<ol>
+    <li *ngFor="let name of names">{{name}}</li>
+</ol>
+
+
+    <select >
+        <option *ngFor="let state of states">{{state}}</option>
+    </select>
+    <h2 *ngFor="let product of products">{{product.name}} price is {{product.price}}.</h2>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table darkblack">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>phone</th>
+                <th>class</th>
+                <th>marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{student.name}}</td>
+                <td>{{student.phone}}</td>
+                <td>{{student.class}}</td>
+                <td>{{student.marks}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1 *ngIf="false">hello</h1>
+
+    <label for="">Number:</label>
+    <input type="number" [(ngModel)]="num">
+
+    <h1 *ngIf="num>0">Thi is positive number</h1>
+    <h1 *ngIf="num<0">This is negative number</h1>
+    <h1 *ngIf="num==0">This is zero</h1>

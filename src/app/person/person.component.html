@@ -1,0 +1,28 @@
+
+<div class="parent" *ngFor="let detail of details">
+   <div class="c1">
+        <h3>PERSONAL DETAILS</h3>
+        <h5>name:{{detail.name}}</h5>
+        <h5>username: {{detail.username}}</h5>
+        <h5>email: {{detail.email}}</h5>
+        <h5>phone: {{detail.phone}}</h5>
+        <h5>website: {{detail.website}}</h5>
+   </div>
+   <div class="c2">
+        <h3>ADDRESS DETAILS</h3>
+        <h5>street: {{detail.address.street}}</h5>
+        <h5>suite: {{detail.address.suite}}</h5>
+        <h5>city: {{detail.address.city}}</h5>
+        <h5>zipcode: {{detail.address.zipcode}}</h5>
+        <h5>lattitude: {{detail.address.geo.lat}}</h5>
+        <h5>longitude: {{detail.address.geo.lng}}</h5>
+   </div>
+    <div class="c3">
+        <h3>COMPANY DETAILS</h3>
+        <h5>name: {{detail.name}}</h5>
+        <h5>catchPhrase: {{detail.company.catchPhrase}}</h5>
+        <h5>bs: {{detail.company.bs}}</h5>
+        
+    </div>
+
+</div>

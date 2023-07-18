@@ -1,0 +1,12 @@
+<div class="row">
+    <div  class="col-lg-3 col-md-4 col-sm-6 col-12 card " *ngFor=" let product of products">
+        <p>id:{{product.id}}</p>
+        <p>title:{{product.title}}</p>
+        <p>price:{{product.price}}</p>
+        <p style="height: 100px; overflow: auto;">{{product.description}}</p>
+        <p>category:{{product.category}}</p>
+        <p>rate:{{product.rating.rate}}  ⭐  ⭐  ⭐  ⭐</p>
+        <p>count:{{product.rating.count}}</p>
+        <img height="100px" width="100px" src="{{product.image}}" alt="" >
+    </div>
+</div>
