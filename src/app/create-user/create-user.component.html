@@ -1,0 +1,16 @@
+<form [formGroup]="userForm">
+    <label >name:</label>
+    <input type="text" formControlName="name">
+    <br>
+    <label >age:</label>
+    <input type="text" formControlName="age">
+    <br>
+    <label >phone:</label>
+    <input type="text" formControlName="phone">
+    <br>
+    <label >email:</label>
+    <input type="text" formControlName="email">
+    <br>
+    <button (click)="submit()">submit</button>
+   
+</form>

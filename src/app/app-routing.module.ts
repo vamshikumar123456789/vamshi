@@ -26,6 +26,7 @@ import { StudentComponent } from './student/student.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { authenticationGuard } from './authentication.guard';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 
 const routes: Routes = [
@@ -54,7 +55,8 @@ const routes: Routes = [
     {path:'person',component:PersonComponent},
     {path:'student',component:StudentComponent},
     {path:'create-vehicle',component:CreateVehicleComponent},
-    {path:'create-account',component:CreateAccountComponent}
+    {path:'create-account',component:CreateAccountComponent},
+    {path:'create-user',component:CreateUserComponent}
     
     
     
