@@ -22,6 +22,50 @@
         <input type="text" formControlName="pin">
         <br> 
     </div>
+    <label >type:</label>
+    <input type="radio" name="a"  formControlName="type" value="day scholar">
+    <label >day scholar:</label>
+    <input type="radio" name="a"  formControlName="type" value="residential">
+    <label >residential</label>
+    <br>
+
+    <div *ngIf="userForm.get('type')?.value =='day scholar'">
+        <label >bus fee:</label>
+        <input type="number" formControlName="busfee">
+        <br>
+    </div>
+    
+
+    <div *ngIf="userForm.get('type')?.value == 'residential'">
+        <label >hostel fee:</label>
+        <input type="number" formControlName="hostelfee">
+        <br>
+    </div>
+    <button (click)="addCard()">add card</button>
+
+    <div formArrayName="cards">
+
+        <div *ngFor="let cards of cardsFormArray.controls; let i = index">
+
+            <div formGroupName="{{i}}">
+                <h6>Card {{i+1}}</h6>
+                
+                <label >no: </label>
+                <input type="number" formControlName="no">
+                <br>
+                <label >exp: </label>
+                <input type="month" formControlName="exp">
+                <br>
+                <label >cvv: </label>
+                <input type="number" formControlName="cvv">
+                <button (click)="deletecard(i)" class="btn btn-danger">delete card</button>
+            </div>
+
+        </div>
+
+    </div>
+    
+    
     <button (click)="submit()">submit</button>
    
 </form>
