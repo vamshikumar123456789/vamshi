@@ -11,6 +11,17 @@
     <label >email:</label>
     <input type="text" formControlName="email">
     <br>
+    <div formGroupName="address">
+        <label >hno:</label>
+        <input type="text" formControlName="hno">
+        <br>
+        <label >state:</label>
+        <input type="text" formControlName="state">
+        <br>
+        <label >pin:</label>
+        <input type="text" formControlName="pin">
+        <br> 
+    </div>
     <button (click)="submit()">submit</button>
    
 </form>
