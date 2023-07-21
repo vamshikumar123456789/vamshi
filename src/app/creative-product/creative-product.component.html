@@ -1,0 +1,63 @@
+<form [formGroup]="userForm">
+
+    <label>name</label>
+    <input type="text" formControlName="name">
+    <br>
+    <label>price</label>
+    <input type="number" formControlName="price">
+    <br>
+    <label>color</label>
+    <input type="text" formControlName="color">
+    <br>
+
+    <div formGroupName="features">
+        <label>ram</label>
+        <input type="text" formControlName="ram">
+        <br>
+        <label>battery</label>
+        <input type="number" formControlName="battery">
+        <br>
+        <label>processor</label>
+        <input type="text" formControlName="processor">
+    </div>
+
+    <button class="btn btn-warning" (click)="addcomments()">comments</button>
+    <div formArrayName="comments">
+        <div *ngFor="let comment of commentsFormArray.controls; let i = index">
+            <div formGroupName="{{i}}">
+                <h6>Comment {{i+1}}</h6>
+                <label>name</label>
+                <input type="text" formControlName="Name">
+                <br>
+                <label>time</label>
+                <input type="datetime-local" formControlName="time">
+                <br>
+                <label>message</label>
+                <input type="text" formControlName="message">
+                <button class="btn btn-danger" (click)="delete(i)">delete</button>
+            </div>
+        </div>
+    </div>
+
+    <label>payments</label>
+    <input type="radio" name="a" formControlName="payments" value="upiaddress">
+    <label>upi</label>
+    <input type="radio" name="a" formControlName="payments" value="netbankingid">
+    <label>net banking</label>
+
+    <div *ngIf="userForm.get('payments')?.value == 'upiaddress'">
+        <label>upi address </label>
+        <input type="number" formControlName="upi">
+
+    </div>
+
+
+    <div *ngIf="userForm.get('payments')?.value == 'netbankingid'">
+        <label>net banking id</label>
+        <input type="number" formControlName="netbanking">
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-primary" (click)="submit()">submit</button>
+
+</form>

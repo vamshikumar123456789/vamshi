@@ -28,6 +28,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { authenticationGuard } from './authentication.guard';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreativeProductComponent } from './creative-product/creative-product.component';
+import { notifyGuard } from './notify.guard';
 
 
 const routes: Routes = [
@@ -55,10 +56,10 @@ const routes: Routes = [
     {path:'memes',component:ActivityComponent},
     {path:'person',component:PersonComponent},
     {path:'student',component:StudentComponent},
-    {path:'create-vehicle',component:CreateVehicleComponent},
-    {path:'create-account',component:CreateAccountComponent},
-    {path:'create-user',component:CreateUserComponent},
-    {path:'creative-product',component:CreativeProductComponent}
+    {path:'create-vehicle',component:CreateVehicleComponent,canDeactivate:[notifyGuard]},
+    {path:'create-account',component:CreateAccountComponent,canDeactivate:[notifyGuard]},
+    {path:'create-user',component:CreateUserComponent,canDeactivate:[notifyGuard]},
+    {path:'creative-product',component:CreativeProductComponent,canDeactivate:[notifyGuard]}
     
     
     
