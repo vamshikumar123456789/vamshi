@@ -29,6 +29,7 @@ import { authenticationGuard } from './authentication.guard';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreativeProductComponent } from './creative-product/creative-product.component';
 import { notifyGuard } from './notify.guard';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 
 const routes: Routes = [
@@ -57,9 +58,11 @@ const routes: Routes = [
     {path:'person',component:PersonComponent},
     {path:'student',component:StudentComponent},
     {path:'create-vehicle',component:CreateVehicleComponent,canDeactivate:[notifyGuard]},
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent},
     {path:'create-account',component:CreateAccountComponent,canDeactivate:[notifyGuard]},
     {path:'create-user',component:CreateUserComponent,canDeactivate:[notifyGuard]},
-    {path:'creative-product',component:CreativeProductComponent,canDeactivate:[notifyGuard]}
+    {path:'creative-product',component:CreativeProductComponent,canDeactivate:[notifyGuard]},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent}
     
     
     
