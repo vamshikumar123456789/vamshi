@@ -33,6 +33,10 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreativeProductComponent } from './creative-product/creative-product.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { PricePipe } from './price.pipe';
+import { AgePipe } from './age.pipe';
+import { ImpDirective } from './imp.directive';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +68,11 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
     CreateAccountComponent,
     CreateUserComponent,
     CreativeProductComponent,
-    VehicleDetailsComponent
+    VehicleDetailsComponent,
+    PricePipe,
+    AgePipe,
+    ImpDirective,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
