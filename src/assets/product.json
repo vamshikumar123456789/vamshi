@@ -1,0 +1,13 @@
+[
+    {
+        "name":"pen",
+        "price":20,
+        "rating":5
+    },
+
+    {    
+        "name":"phone",
+        "price":20000,
+        "rating":4
+    }
+]

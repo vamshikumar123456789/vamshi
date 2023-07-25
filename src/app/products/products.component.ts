@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ProductsService } from '../products.service';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-products',
@@ -9,11 +10,11 @@ import { ProductsService } from '../products.service';
 })
 export class ProductsComponent {
 
-  public products:any={};
+  public products:Product[]=[];
 
   constructor(private productservice:ProductsService){
     this.productservice.getProducts().subscribe(
-      (data:any)=>{
+      (data:Product[])=>{
         this.products=data;
       },
       (err:any)=>{
