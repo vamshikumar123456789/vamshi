@@ -45,7 +45,7 @@
     <div class="text text-danger" *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
         <p *ngIf="userForm.get('email')?.errors?.['required']">this field is required</p>
         <p *ngIf="userForm.get('email')?.errors?. ['email']">invalid email</p>
-        
+        <p *ngIf="userForm.get('email')?.errors?. ['domainValidator']">only capgemini mail accepted</p>
     </div>  
 
 
@@ -60,6 +60,7 @@
         <div class="text text-danger" *ngIf="userForm.get('address')?.get('state')?.invalid && userForm.get('address')?.get('state')?.touched">
             <p *ngIf="userForm.get('address')?.get('state')?.errors?.['required']">state is required</p>
             <p *ngIf="userForm.get('address')?.get('state')?.errors?.['minlength']">min 5 char is required</p>
+            <p *ngIf="userForm.get('address')?.get('state')?.errors?.['stateValidator']">only ts,ap are accepted</p>
         </div>
 
         <label >pin:</label>
