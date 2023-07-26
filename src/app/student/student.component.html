@@ -49,7 +49,7 @@
             <td>{{info.phone}}</td>
             <td>{{info.city}}</td>
             <td>{{info.fee}}</td>
-            <td>{{info.id}}</td>
+            <td>{{info.id | age}}</td>
 
             <td>
                 <button class="btn btn-danger" (click)="deleteinfo(info.id)">delete</button>
