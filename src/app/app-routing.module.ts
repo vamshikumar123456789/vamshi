@@ -31,6 +31,10 @@ import { CreativeProductComponent } from './creative-product/creative-product.co
 import { notifyGuard } from './notify.guard';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { ProductsComponent } from './products/products.component';
+import { ParentComponent } from './parent/parent.component';
+import { ItemComponent } from './item/item.component';
+import { NavComponent } from './nav/nav.component';
+import { CastComponent } from './cast/cast.component';
 
 
 const routes: Routes = [
@@ -64,7 +68,11 @@ const routes: Routes = [
     {path:'create-user',component:CreateUserComponent,canDeactivate:[notifyGuard]},
     {path:'creative-product',component:CreativeProductComponent,canDeactivate:[notifyGuard]},
     {path:'vehicle-details/:id',component:VehicleDetailsComponent},
-    {path:'products',component:ProductsComponent}
+    {path:'products',component:ProductsComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'item',component:ItemComponent},
+    {path:'nav',component:NavComponent},
+    {path:'cast',component:CastComponent}
     
     
     

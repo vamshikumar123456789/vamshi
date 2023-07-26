@@ -37,6 +37,11 @@ import { PricePipe } from './price.pipe';
 import { AgePipe } from './age.pipe';
 import { ImpDirective } from './imp.directive';
 import { ProductsComponent } from './products/products.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { ItemComponent } from './item/item.component';
+import { NavComponent } from './nav/nav.component';
+import { CastComponent } from './cast/cast.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +77,12 @@ import { ProductsComponent } from './products/products.component';
     PricePipe,
     AgePipe,
     ImpDirective,
-    ProductsComponent
+    ProductsComponent,
+    ParentComponent,
+    ChildComponent,
+    ItemComponent,
+    NavComponent,
+    CastComponent
   ],
   imports: [
     BrowserModule,
