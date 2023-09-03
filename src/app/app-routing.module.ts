@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -35,6 +35,10 @@ import { ParentComponent } from './parent/parent.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CastComponent } from './cast/cast.component';
+import { Task1AComponent } from './task1-a/task1-a.component';
+import { Task1BComponent } from './task1-b/task1-b.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
+import { CeoComponent } from './about/ceo/ceo.component';
 
 
 const routes: Routes = [
@@ -72,7 +76,18 @@ const routes: Routes = [
     {path:'parent',component:ParentComponent},
     {path:'item',component:ItemComponent},
     {path:'nav',component:NavComponent},
-    {path:'cast',component:CastComponent}
+    {path:'cast',component:CastComponent},
+    {path:'task1A',component:Task1AComponent},
+    {path:'task1B',component:Task1BComponent},
+    {path:'aboutcompany',component:AboutCompanyComponent},
+    {path:'ceo',component:CeoComponent},
+    {
+      path:'contact',
+      loadChildren: ()=> import('./contact/contact.module').then(m => m.ContactModule)
+    },
+    {path:'payments',
+    loadChildren: ()=> import('./payments/payments.module').then(m => m.PaymentsModule)
+  }
     
     
     
@@ -83,7 +98,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
