@@ -15,6 +15,7 @@ public vehicleform: FormGroup =new FormGroup({
   model:new FormControl(),
   type: new FormControl(),
   fuel:  new FormControl(),
+
   color:new FormControl(),
   image: new FormControl(),
 
@@ -36,7 +37,7 @@ constructor(private vehicleService:VehicleService,private activatedRoute:Activat
 }
 
 submit(){
-  console.log(this.vehicleform.value);
+   console.log(this.vehicleform.value);
 
   if(this.id?.length>0){
     // update

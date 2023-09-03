@@ -14,6 +14,6 @@ export class CommonService {
   }
 
   getValue(){
-    return this.countSub.asObservable();
+    return  this.countSub.asObservable();
   }
 }

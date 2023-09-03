@@ -1,0 +1,11 @@
+<div class="parent">
+    
+    <h1>Calculator</h1>
+    <input type="number" [(ngModel)]="num1">
+    <br>
+    <input type="number" [(ngModel)]="num2">
+    <br>
+    <h2>result: <p style="color:rgb(48, 27, 238);">{{result}}</p></h2>
+
+    <app-task1-b [num1]="num1" [num2]="num2" (info)="catch($event)"></app-task1-b>
+</div>

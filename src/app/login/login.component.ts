@@ -22,7 +22,7 @@ export class LoginComponent {
 
     this.loginService.doLogin(this.loginForm.value).subscribe(
       (data: any) => {
-        // alert("login success")
+        alert("login success")
         this.router.navigateByUrl('/dashboard');
         localStorage.setItem('token',data.token);
       },

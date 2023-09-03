@@ -42,6 +42,11 @@ import { ChildComponent } from './child/child.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CastComponent } from './cast/cast.component';
+import { Task1AComponent } from './task1-a/task1-a.component';
+import { Task1BComponent } from './task1-b/task1-b.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
+import { AboutModule } from './about/about.module';
+
 
 @NgModule({
   declarations: [
@@ -82,7 +87,11 @@ import { CastComponent } from './cast/cast.component';
     ChildComponent,
     ItemComponent,
     NavComponent,
-    CastComponent
+    CastComponent,
+    Task1AComponent,
+    Task1BComponent,
+
+    
   ],
   imports: [
     BrowserModule,
@@ -90,6 +99,7 @@ import { CastComponent } from './cast/cast.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
